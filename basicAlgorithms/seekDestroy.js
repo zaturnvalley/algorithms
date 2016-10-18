@@ -15,7 +15,7 @@ function destroyer(arr) {
       }
     });
   }
-  for (var j = arr.length -1; j > 0; j--) {
+  for (var j = arr.length -1; j >= 0; j--) {
     checker();
   }
   return arr; 
