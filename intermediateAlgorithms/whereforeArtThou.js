@@ -1,4 +1,3 @@
-
 function whatIsInAName(collection, source) {
   // What's in a name?
   var arr = [];
@@ -6,11 +5,9 @@ function whatIsInAName(collection, source) {
   for(var i = 0; i < collection.length; i++){
     for (var secondVal in source){
       for (var val in collection[i]){
-        if(val == secondVal){
-          if(!arr.includes(collection[0])){
-          arr.push(collection[0]);  
-          }
-        }
+      if(val === secondVal && !arr.includes(collection[i]) && collection[i][val] === source[secondVal]){
+      arr.push(collection[i]);  
+      }
       }
     }
   }
