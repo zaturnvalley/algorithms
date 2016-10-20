@@ -1,3 +1,14 @@
+function convert(num){
+  var options = [1, 4, 5, 9, 10, 40, 50, 90, 100, 400, 500, 900, 1000];
+  var romans = ['I', 'IV', 'V', 'IX', 'X', 'XL', 'L', 'XC', 'C', 'CD', 'D', 'CM', 'M'];
+
+  var workingNum = num;
+
+  for (var i = 0; i < options.length; i++) {
+    
+  }
+}
+
 //this is the incredibly non-dry awful coding way to solve this
 function convertToRoman(num) {
 
