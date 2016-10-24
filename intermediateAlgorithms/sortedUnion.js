@@ -9,7 +9,11 @@ function uniteUnique(arr) {
   var flat = array.reduce(function(a, b){
     return a.concat(b);
   });
-  return flat;
+  var answer = [];
+  for (var i = 0; i < flat.length; i++){
+    if (!answer.includes(flat[i])){
+      answer.push(flat[i]);
+    }
+  }
+  return answer;
 }
-
-uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);
