@@ -7,12 +7,12 @@ function sumFibs(num) {
   var temp;
   var i = 0;
   var sum = 0;
-  while (i < num){
+  while (b <= num){
     temp = b;
     b = a + b;
     a = temp;
     i++;
-    if (a % 2 !== 0 && a <= num){
+    if (a % 2 !== 0){
       sum += a;
     }
   }
