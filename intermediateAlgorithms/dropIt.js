@@ -2,11 +2,12 @@
 //starting from the front, until the predicate (second argument) returns true.
 
 function dropElements(arr, func) {
-  for (var i = 0; i < arr.length; i++){
-    if (func(arr[0]) && func(arr[i + 1])){
+  var howLong = arr.length;
+  for (var i = 0; i < howLong; i++){
+    if (func(arr[0])){
       return arr;
     } else {
-      arr.splice(0,1);
+    arr.shift();
     }
   } return arr;
 }
