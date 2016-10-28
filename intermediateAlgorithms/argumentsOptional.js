@@ -8,10 +8,12 @@ function addTogether() {
     return arguments[0] + arguments[1];
   } else if (typeof arguments[0] === 'number' && !arguments[1]){
     return function(arg2){ 
+      if (Array.isArray(arg2)){
+        return undefined;
+      }
           return arg + arg2;
         };
   }
   return undefined;
 }
-addTogether(4)(3);
-
+addTogether(4)([3]);
