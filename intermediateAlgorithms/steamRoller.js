@@ -2,14 +2,15 @@
 
 function steamrollArray(arr) {
   var flat = [];
-  //thinking that i may need to use recursion 
-  for (var i = arr.length - 1; i > 0; i++){
-    if(arr[i].constructor === Array){
-      steamrollArray(arr[i]);
+  
+  for (var i = 0; i < arr.length; i++){
+    if(arr[i] instanceof Array){
+      flat = flat.concat(steamrollArray(arr[i]));
     } else {
-      flat.push[i];
+      flat.push(arr[i]);
     }
   } return flat;
 }
 
 steamrollArray([1, [2], [3, [[4]]]]);
+
