@@ -15,11 +15,25 @@
 //   } return solution.join('');
 // }
 
+// using es6 logic
+function reverseAlt(str){
+  let reversed = '';
+  for (let character of str){
+    reversed = character + reversed;
+  }
+  return reversed;
+}
+
 // using reduce
 function reverseString(str){
-  var splStr = str.split('');
-  return splStr.reduce(function(a,b){return [b].concat(a);}, []).join('');
+  return str.split('').reduce(function(a,b){return [b].concat(a);}, []).join('');
 }
+
+// using reduce
+function reverseTwo(str){
+  return str.split('').reduce((reversed,character)=>{return character + reversed;}, '');
+}
+
 module.exports = reverse;
 
 reverseString("hello");
