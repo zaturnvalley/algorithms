@@ -21,3 +21,30 @@ function maxChar(str){
   }
   return biggestNum;
 }
+
+// ALT way to do this algorithm
+
+function maxCharTwo(str) {
+  const charMap = {};
+  let max = 0;
+  let maxChar = '';
+
+  for (let char of str){
+    charMap[char] = charMap[char] + 1 || 1;
+
+    // same as above
+    // if (!charMap[char]){
+    //   charMap[char] = 1;
+    // } else {
+    //   charMap[char]++;
+    // }
+  }
+
+  for (let char in charMap){
+    if (charMap > max ){
+      max = charMap[char];
+      maxChar = char;
+    }
+  }
+  return maxChar;
+}
